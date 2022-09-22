@@ -11,6 +11,8 @@ export default function Profile({ user }) {
       <div className="profile">
         <h3>Welcome {user.name}</h3>
         <img src={user.icon_img} style={{ maxWidth: "200px" }} />
+        <p>{user.comment_karma}</p>
+        <p>{user.link_karma}</p>
       </div>
     </>
   ) : (
@@ -102,21 +104,6 @@ const getUser = async (access_token) => {
       Authorization: `Bearer ${access_token}`,
       content_type: "application/json",
     },
-    
   });
-  
-
   return data.data;
-};
-
-const getPost = async (access_token) => {
-  console.log(access_token);
-  const post = await axios.get("https://oauth.reddit.com/api/v1/subreddits/popular", {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-      content_type: "application/json",
-    },
-    
-  });
-  return post.data;
 };

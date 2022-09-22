@@ -1,0 +1,36 @@
+.filterBox{
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    padding: 10px 0px;
+    margin-bottom: 6px;
+    height: 34px;
+}
+.filterBox > button:nth-of-type(1){
+    margin-left: 10px;
+}
+.filterBox > button{
+    height: auto;
+    border: none;
+    border-radius: 25px;
+    padding: 9px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    color: #0079D3;
+    background: #FFF;
+    font-weight: 600;
+    font-size: 14px;
+}
+.filterBox > button:hover{
+    cursor: pointer;
+    background: #EDEFF1 !important;
+}
+.filterBox i{
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+.s{
+    background: #F6F7F8 !important;
+}

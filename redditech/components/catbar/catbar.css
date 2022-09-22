@@ -1,0 +1,18 @@
+.navcat {
+    background-color: var(--headder-background);
+    padding: 5px 30px 5px 30px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 8px;
+
+}
+.logocat {
+    margin-right: 10px;
+}
+
+.textcat {
+    margin-right : 30px;
+    font-weight: bolder;
+    color : rgb(167, 165, 165)
+}
