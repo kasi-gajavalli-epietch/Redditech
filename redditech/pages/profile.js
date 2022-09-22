@@ -5,11 +5,14 @@ import querystring from "querystring";
 import { getCookies, getCookie, setCookie, deleteCookie } from "cookies-next";
 
 export default function Profile({ user }) {
+  console.log(user);
   return user ? (
     <>
       <div className="profile">
         <h3>Welcome {user.name}</h3>
-        <img src={user.snoovatar_img} style={{ maxWidth: "200px" }} />
+        <img src={user.icon_img} style={{ maxWidth: "200px" }} />
+        <p>{user.comment_karma}</p>
+        <p>{user.link_karma}</p>
       </div>
     </>
   ) : (
@@ -93,12 +96,23 @@ export const getServerSideProps = async ({ query, req, res }) => {
 };
 
 const getUser = async (access_token) => {
+  console.log(access_token);
   const data = await axios.get("https://oauth.reddit.com/api/v1/me", {
     headers: {
       Authorization: `Bearer ${access_token}`,
       content_type: "application/json",
     },
   });
-
-  return data.data;
+return data.data;
 };
+
+
+
+
+
+
+
+
+
+ 
+ 

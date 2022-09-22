@@ -1,6 +1,18 @@
 import React from 'react'
 
+
+
+
+
+
+
+
+
+
+
 const Post = () => {
+	
+	
   return (
    <div className="flex border border-grey-light-alt hover:border-grey rounded bg-white cursor-pointer">
 								<div className="w-1/12 flex flex-col text-center pt-2">
