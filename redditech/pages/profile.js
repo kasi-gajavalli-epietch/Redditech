@@ -5,11 +5,12 @@ import querystring from "querystring";
 import { getCookies, getCookie, setCookie, deleteCookie } from "cookies-next";
 
 export default function Profile({ user }) {
+  console.log(user);
   return user ? (
     <>
       <div className="profile">
         <h3>Welcome {user.name}</h3>
-        <img src={user.snoovatar_img} style={{ maxWidth: "200px" }} />
+        <img src={user.icon_img} style={{ maxWidth: "200px" }} />
       </div>
     </>
   ) : (
@@ -82,7 +83,9 @@ export const getServerSideProps = async ({ query, req, res }) => {
         maxAge: 60 * 60 * 24,
       });
       const user = await getUser(token.access_token);
+      console.log(access_token, refresh_token);
       return { props: { user } };
+      // window.location.href = "/";
     } catch (e) {
       console.log(e);
       return { props: { user: null } };
@@ -93,12 +96,27 @@ export const getServerSideProps = async ({ query, req, res }) => {
 };
 
 const getUser = async (access_token) => {
+  console.log(access_token);
   const data = await axios.get("https://oauth.reddit.com/api/v1/me", {
     headers: {
       Authorization: `Bearer ${access_token}`,
       content_type: "application/json",
     },
+    
   });
+  
 
   return data.data;
+};
+
+const getPost = async (access_token) => {
+  console.log(access_token);
+  const post = await axios.get("https://oauth.reddit.com/api/v1/subreddits/popular", {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+      content_type: "application/json",
+    },
+    
+  });
+  return post.data;
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-
 import Navbar from '../components/Navbar'
 import Post from '../components/Post'
 import Sidebar from '../components/Sidebar'
@@ -12,7 +11,7 @@ function index() {
 		<div className="mt-12">
 			<div className="bg-white mb-3">
 				<div className="container mx-auto">
-					<Navbar/>
+					<Navbar />
 				</div>
 			</div>
 			<div className="container mx-auto">
@@ -31,3 +30,4 @@ function index() {
 }
 
 export default index
+

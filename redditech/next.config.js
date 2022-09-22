@@ -4,4 +4,9 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports ={
+  images: {
+    domains: ["upload.wikimedia.org", "styles.redditmedia.com", "www.redditstatic.com"],
+  },
+
+}

@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 
-export default function Home() {
+export default function Homes() {
+  
   const DURATION = "permanent";
   const SCOPE = "identity edit flair history read vote wikiread wikiedit";
   const REDIRECT_URI = "http://localhost:3000/profile";
