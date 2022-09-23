@@ -16,7 +16,7 @@ function Header() {
                     <div className="ml-5">
                         <div className="w-68 h-full border border-white hover:border-grey-lightest flex items-center rounded px-10 relative">
                             <svg className="w-5 absolute pin-l ml-2 fill-current text-blue-dark" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g><polygon fill="none" points="0 20 20 20 20 0 0 0"></polygon><polygon fill="inherit" points="12.5 3.5 20 3.5 20 11 17.5 8.5 11.25 14.75 7.5 11 2.5 16 0 13.5 7.5 6 11.25 9.75 15 6"></polygon></g></svg>
-                            <span className="font-medium text-sm">Popular</span>
+                            <span className="font-medium text-sm">Hot</span>
                             <svg className="w-6 absolute pin-r mr-2" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g><path fill="inherit" d="M14.1711599,9.3535 L9.99925636,13.529 L5.82735283,9.3535 C5.51262415,9.0385 5.73543207,8.5 6.18054835,8.5 L13.8179644,8.5 C14.2630807,8.5 14.4858886,9.0385 14.1711599,9.3535"></path></g></svg>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ function Header() {
                     <Link href="/login">
                         <a href="#" className="border border-blue-dark text-blue-dark px-8 py-2.2 font-semibold text-xs rounded ml-4 no-underline hover:border-blue hover:text-blue">LOG IN</a>
                     </Link>
-                    <a href="#" className="border border-blue-dark bg-blue-dark text-white px-8 py-2.2 font-semibold text-xs rounded ml-4 no-underline hover:bg-blue">SIGN UP</a>
+                    
                     <button className="inline-flex items-center ml-3 mr-5">
                         <div className="flex items-center pr-2">
                             <svg className="w-6 fill-current text-grey-dark" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"><g fill="inherit"><path d="M146.8 142.6h-37.6c-31.1 0-56.5 25.3-56.5 56.5 0 5.2 4.2 9.4 9.4 9.4h131.8c5.2 0 9.4-4.2 9.4-9.4 0-31.2-25.3-56.5-56.5-56.5zM128 130.7c20.1 0 36.4-16.3 36.4-36.4v-9.4c0-20.1-16.3-36.4-36.4-36.4S91.6 64.8 91.6 84.9v9.4c0 20.1 16.3 36.4 36.4 36.4z"></path></g></svg>

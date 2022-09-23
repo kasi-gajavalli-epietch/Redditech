@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar'
 import Post from '../components/Post'
 import Sidebar from '../components/Sidebar'
+import Subreddit from '../components/Subreddit'
 
 
 
@@ -22,7 +23,7 @@ function index() {
 					<div className="flex w-960 mx-auto">
 						<div className="w-2/3">
 							<div className="py-2">
-								<Post />
+								<Subreddit />
 							</div>
 						</div>
 						<Sidebar />

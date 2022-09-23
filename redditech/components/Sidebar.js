@@ -11,7 +11,7 @@ const Sidebar = () => {
 									<div>
 										<div className="inline-flex items-center">
 											<img src="https://www.redditstatic.com/desktop2x/img/id-cards/snoo-home@2x.png" className="h-16"></img>
-											<span className="text-lg ml-4 mt-6">r/popular</span>
+											<span className="text-lg ml-4 mt-6">r/hot</span>
 										</div>
 										<p className="font-normal mb-3 text-sm leading-normal">The best posts on Reddit for you, pulled from the most active communities on Reddit. Check here to see the most shared, upvoted, and commented content on the internet.</p>
 										<button className="bg-blue-dark text-sm text-white font-semibold rounded px-4 py-2 w-full">CREATE POST</button>

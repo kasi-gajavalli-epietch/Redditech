@@ -22,6 +22,8 @@ const Posts = () =>{
         .then(res => res.json())
         .then(data => data.data.children.map((item, idx) =>{
             console.log(item.data)
+            let createdDate = new Date(item.data.created * 1000);
+            var humanFormat = createdDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true, day: 'numeric', month: 'short' });
                 let text = item.data.selftext;
                 let textLength = text.length;
                 text = text.slice(0, 700);
@@ -33,15 +35,7 @@ const Posts = () =>{
                 return (
                     <div className="post" key={idx}>
                         
-                        {/* <div className="post-img">
-                            <img src={img_url} alt="post-img"/>
-                        </div> */}
-                        
-                        
-                    
-
-                    
-                    <div className="flex border border-grey-light-alt hover:border-grey rounded bg-white cursor-pointer">
+       <div className="flex border border-grey-light-alt hover:border-grey rounded bg-white cursor-pointer">
 								<div className="w-1/12 flex flex-col text-center pt-2">
 									<button className="text-xs">
 										<svg className="w-5 fill-current text-grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 10v8h6v-8h5l-8-8-8 8h5z"/></svg>
@@ -60,7 +54,7 @@ const Posts = () =>{
 										<span className="text-grey-light mx-1 text-xxs">•</span>
 										<span className="text-grey">Posted by</span>
 										<a href={`https://www.reddit.com/user/${item.data.author}`} className="text-grey mx-1 no-underline hover:underline">{item.data.author}</a>
-										<span className="text-grey">2 hours ago</span>
+										<span className="text-grey">{humanFormat}</span>
 									</div>
 									<div>
 										<h2 className="text-lg font-medium mb-1"><a href={item.data.url} target="_blank" rel="noreferrer">{item.data.title}</a></h2>
@@ -101,7 +95,7 @@ const Posts = () =>{
         loadedPosts = [];
         postsLoaded = 0;
         after = "";
-        loadPosts(20);
+        loadPosts(30);
     }, [filter]);
     useEffect(() =>{        
         document.addEventListener("scroll", () =>{
@@ -114,7 +108,7 @@ const Posts = () =>{
     }, []);
     return(
         <div className="posts">
-            <h4>Popular posts</h4>
+            <h4>Hot posts</h4>
             
             {posts.map((post) =>{
                 return post;

@@ -6,6 +6,7 @@ import { getCookies, getCookie, setCookie, deleteCookie } from "cookies-next";
 
 export default function Profile({ user }) {
   console.log(user);
+  
   return user ? (
     <>
       <div className="profile">
@@ -13,7 +14,7 @@ export default function Profile({ user }) {
         <img src={user.icon_img} style={{ maxWidth: "200px" }} />
         <p>{user.comment_karma}</p>
         <p>{user.link_karma}</p>
-      </div>
+      </div>’’
     </>
   ) : (
     <p>Please login</p>
